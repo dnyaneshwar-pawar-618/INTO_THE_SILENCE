@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Typing Speed Tester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Typing Speed Tester</h1>
+
+        <!-- Time Options -->
+        <div class="time-options">
+            <button class="time-btn active" data-time="15">15s</button>
+            <button class="time-btn" data-time="30">30s</button>
+            <button class="time-btn" data-time="60">60s</button>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer">
+            Time Left: <span id="time">15</span>s
+        </div>
+
+        <!-- Text Display -->
+        <div class="text-display" id="textDisplay"></div>
+
+        <!-- Input -->
+        <textarea id="inputField" placeholder="Start typing here..." disabled></textarea>
+
+        <!-- Results -->
+        <div class="results">
+            <p>WPM: <span id="wpm">0</span></p>
+            <p>Accuracy: <span id="accuracy">0</span>%</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="restartBtn">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

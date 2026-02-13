@@ -1,0 +1,176 @@
+SPACE & COSMOS PROJECT IDEAS (Pure JS + HTML + CSS)
+
+--------------------------------------------------
+1. Solar System Explorer (Interactive)
+--------------------------------------------------
+Description:
+Build an interactive model of the solar system.
+
+Features:
+- Click on planets to see details (mass, radius, orbit time)
+- Animated orbits using requestAnimationFrame
+- Dark mode space UI
+- Responsive design
+
+Optional API:
+- Le Systeme Solaire API
+- NASA Open APIs
+
+Skills Used:
+- DOM manipulation
+- CSS animations
+- Fetch API
+- Object rendering
+
+
+--------------------------------------------------
+2. NASA Astronomy Picture of the Day (APOD) Viewer
+--------------------------------------------------
+Description:
+Create a website that fetches NASA's daily space image.
+
+API:
+- NASA APOD API
+
+Features:
+- Show image or video of the day
+- Date picker to view previous days
+- Save favorite images (localStorage)
+- Download button
+- Random space image button
+
+
+--------------------------------------------------
+3. Live ISS Tracker
+--------------------------------------------------
+Description:
+Track the International Space Station in real time.
+
+API:
+- Open Notify ISS API
+
+Features:
+- Show live latitude & longitude
+- Display ISS on a world map
+- Show next pass over user’s country
+- Auto refresh every 5 seconds
+
+
+--------------------------------------------------
+4. Meteor Shower Calendar App
+--------------------------------------------------
+Description:
+Web app that shows upcoming meteor showers.
+
+Features:
+- List of celestial events
+- Countdown timer
+- Filter by month
+- Dark cosmic theme
+
+
+--------------------------------------------------
+5. Exoplanet Explorer
+--------------------------------------------------
+Description:
+Display discovered exoplanets and their data.
+
+API:
+- NASA Exoplanet Archive
+
+Features:
+- Search by planet name
+- Filter by distance, size, discovery year
+- Compare with Earth
+- Data charts using Chart.js
+
+
+--------------------------------------------------
+6. Moon Phase Tracker
+--------------------------------------------------
+Description:
+Display real-time moon phase.
+
+Features:
+- Show moon phase (new, full, etc.)
+- Animate moon cycle
+- Next full moon countdown
+- Location-based calculations
+
+
+--------------------------------------------------
+7. Space Launch Tracker
+--------------------------------------------------
+Description:
+Track upcoming rocket launches.
+
+API:
+- Launch Library 2 API
+
+Features:
+- Show next launches
+- Countdown timer
+- Filter by company
+- Mission details view
+
+
+--------------------------------------------------
+8. 3D Galaxy Simulation (Advanced)
+--------------------------------------------------
+Description:
+Create a galaxy simulation using Canvas.
+
+Features:
+- Random star generation
+- Parallax mouse effect
+- Warp-speed animation
+- Star connection lines
+
+
+--------------------------------------------------
+9. Space Quiz App
+--------------------------------------------------
+Description:
+Cosmic trivia game.
+
+Features:
+- 10-question quiz
+- Timer
+- Score system
+- Difficulty levels
+- Leaderboard (localStorage)
+
+
+--------------------------------------------------
+10. Black Hole Visualizer
+--------------------------------------------------
+Description:
+Animated simulation of a black hole.
+
+Features:
+- Accretion disk animation
+- Gravitational lensing effect
+- Moving star background
+- Information section about black holes
+
+
+--------------------------------------------------
+BONUS IDEAS
+--------------------------------------------------
+- Build Your Own Planet Generator
+- Space Mission Timeline (Apollo to Mars)
+- Compare Planet Gravity Calculator
+- Constellation Viewer (Canvas drawing)
+- Mars Weather App
+
+
+
+
+
+
+
+
+
+
+
+

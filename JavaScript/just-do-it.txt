@@ -1,8 +1,0 @@
-Sorting Algorithm Visualizer: Build a web application that graphically demonstrates how different sorting algorithms (like bubble sort, merge sort, etc.) work in real-time.
-
-Interactive "Data Storyteller" for Social Issues
-Instead of a static chart, build a tool that allows users to explore complex datasets (like climate change or economic inequality) through interactive scrubbing or scrollytelling.
-Impact: Turns boring data into an engaging narrative that drives awareness.
-The Logic: Manually parse CSV/JSON data and map it to SVG elements that animate based on the user’s scroll position.
-Key APIs: SVG API, Intersection Observer API (to trigger animations on scroll), and File API (for custom data uploads). 
-

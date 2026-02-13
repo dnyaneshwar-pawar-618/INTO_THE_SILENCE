@@ -27,6 +27,7 @@ let correctTyped = 0;
 
 // ========== TIME SELECTION ==========
 timeButtons.forEach(btn => {
+    // console.log(timeButtons)
     btn.addEventListener("click", () => {
         timeButtons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
@@ -52,6 +53,7 @@ function generateText() {
     finalText.split("").forEach(char => {
         const span = document.createElement("span");
         span.textContent = char;
+        // console.log("span..", span)
         textDisplay.appendChild(span);
     });
 
@@ -91,7 +93,7 @@ function endTest() {
 
     let minutes = timeLimit / 60;
     let wpm = Math.round((correctTyped / 5) / minutes);
-    let accuracy = totalTyped === 0 ? 0 : 
+    let accuracy = totalTyped === 0 ? 0 :
         Math.round((correctTyped / totalTyped) * 100);
 
     wpmElement.textContent = wpm;
@@ -103,9 +105,11 @@ inputField.addEventListener("input", () => {
     if (!isTyping) return;
 
     const typedText = inputField.value;
+    // console.log('typedText...', typedText)
     const spans = textDisplay.querySelectorAll("span");
 
     totalTyped = typedText.length;
+    // console.log("totalTyped...", totalTyped)
     correctTyped = 0;
 
     spans.forEach((span, index) => {

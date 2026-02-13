@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayGround</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h1 {
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .timer{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello, Cosmos!!</h1>
+
+
+    <!-- timer.js (13 Feb 2026) -->
+    <div class="time-options">
+        <button class="time-btn active" data-time="15">15s</button>
+        <button class="time-btn active" data-time="30">30s</button>
+        <button class="time-btn active" data-time="60">60s</button>
+    </div>
+
+    <div class="timer">
+        Time Left: <span id="time">15</span>s
+    </div>
+
+    <div class="controls">
+        <button id="startBtn">Start</button>
+    </div>
+
+</body>
+<script src="timer.js"></script>
+<script src="temp.js"></script>
+
+</html>

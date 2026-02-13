@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer | Sorting Algorithms</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <h1>SORT<span class="highlight">_VISION</span></h1>
+            </div>
+            <div class="subtitle">Real-time Algorithm Visualization System</div>
+        </header>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <div class="control-section">
+                <label class="control-label">
+                    <span class="label-text">Algorithm</span>
+                    <select id="algorithmSelect" class="select-input">
+                        <option value="bubble">Bubble Sort</option>
+                        <option value="selection">Selection Sort</option>
+                        <option value="insertion">Insertion Sort</option>
+                        <option value="merge" selected>Merge Sort</option>
+                        <option value="quick">Quick Sort</option>
+                        <option value="heap">Heap Sort</option>
+                    </select>
+                </label>
+
+                <label class="control-label">
+                    <span class="label-text">Array Size: <span id="sizeValue">50</span></span>
+                    <input type="range" id="arraySize" min="10" max="100" value="50" class="slider">
+                </label>
+
+                <label class="control-label">
+                    <span class="label-text">Speed: <span id="speedValue">Medium</span></span>
+                    <input type="range" id="speed" min="1" max="5" value="3" class="slider">
+                </label>
+            </div>
+
+            <div class="button-group">
+                <button id="generateBtn" class="btn btn-secondary">
+                    <span class="btn-icon">🔄</span>
+                    New Array
+                </button>
+                <button id="sortBtn" class="btn btn-primary">
+                    <span class="btn-icon">▶</span>
+                    Start Sort
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-label">Comparisons</div>
+                <div class="stat-value" id="comparisons">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Array Accesses</div>
+                <div class="stat-value" id="arrayAccess">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Time Complexity</div>
+                <div class="stat-value complexity" id="timeComplexity">O(n log n)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Space Complexity</div>
+                <div class="stat-value complexity" id="spaceComplexity">O(n)</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Status</div>
+                <div class="stat-value" id="status">Ready</div>
+            </div>
+        </div>
+
+        <!-- Visualization Area -->
+        <div class="visualization-container">
+            <div id="arrayContainer" class="array-container"></div>
+        </div>
+
+        <!-- Algorithm Info -->
+        <div class="info-panel">
+            <h3 class="info-title">Algorithm Details</h3>
+            <p class="info-description" id="algoDescription">
+                Merge Sort is a divide-and-conquer algorithm that divides the array into halves, recursively sorts them, and then merges the sorted halves.
+            </p>
+            <div class="info-complexity">
+                <div class="complexity-item">
+                    <strong>Best Case:</strong> <span id="bestCase">O(n log n)</span>
+                </div>
+                <div class="complexity-item">
+                    <strong>Average Case:</strong> <span id="avgCase">O(n log n)</span>
+                </div>
+                <div class="complexity-item">
+                    <strong>Worst Case:</strong> <span id="worstCase">O(n log n)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with <span class="pulse">❤️</span> for learning JavaScript | Explore the code to understand each algorithm</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

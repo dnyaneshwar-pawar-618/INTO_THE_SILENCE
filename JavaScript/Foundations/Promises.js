@@ -68,13 +68,33 @@ validateUsername('will')
 
 //* ----------------------------------------------------------------
 
-const url = 'https://v2.jokeapi.dev/joke/Any'
+// const url = 'https://v2.jokeapi.dev/joke/Any'
 
-const fetchData = async () => {
-    const response = await fetch(url)
-    console.log(response)
-    const data = await response.json()
-    console.log(data)
-}
+// const fetchData = async () => {
+//     const response = await fetch(url)
+//     console.log(response)
+//     const data = await response.json()
+//     console.log(data)
+// }
 
-fetchData()
+// fetchData()
+
+
+
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let success = false
+        if (success) {
+            resolve("Operation Successful!")
+        } else {
+            reject("Operation Failed!")
+        }
+    }, 2000);
+})
+
+promise
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
+    .finally(() => console.log("Done!"))
+
+

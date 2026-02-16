@@ -40,14 +40,51 @@
 // console.log(arr.map(binary))
 
 
-console.log("hello")
+// console.log("hello")
 
-console.log(Math.floor(Math.random() * 2))
+// console.log(Math.floor(Math.random() * 2))
 
-text = ['hello', 'hey' ,'sorry' ]
-final_text = text.join(' ')
-console.log(final_text.split(''))
+// text = ['hello', 'hey' ,'sorry' ]
+// final_text = text.join(' ')
+// console.log(final_text.split(''))
 // console.log()
 
 
 // function 
+
+
+// closures
+function outer() {
+    let outerVar = "I'm in the outer scope!"
+    function inner() {
+        console.log(outerVar)
+        outerVar = "Updated"
+        console.log(outerVar)
+    }
+    return inner
+}
+
+
+const closure = outer()
+console.log(closure)
+closure()
+
+
+function greet() {
+    console.log('Hello, my name is ' + this.name);
+}
+
+const person = {
+    name: 'Amit',
+    sayHello: greet
+};
+
+const anotherPerson = {
+    name: 'Jatin'
+};
+
+greet();
+person.sayHello();
+greet.call(anotherPerson);
+
+console.log(this)

@@ -147,3 +147,32 @@ for(let i in posNum) {
 
 
 //* ___________________________________________________________________________
+
+
+
+// //! Callback function
+// function sun(saturn) {
+//     let count = 0
+
+//     const inteval =  setInterval(() => {
+//         console.log(`Tick-Tick: ${count++}`)
+//         if (count == 5) {
+//             let moons = saturn()
+//             console.log(`I have ${moons} confirmed moons. And I orbit around The Sun`)
+           
+//         }
+
+//         if (count == 5) {
+//              clearInterval(inteval)
+//              console.log("The End...")
+//         }
+//     }, 1000);
+// }
+
+// function saturn() {
+//     let moons = 274
+//     return moons
+// }
+
+// sun(saturn)
+

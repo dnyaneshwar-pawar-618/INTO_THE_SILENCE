@@ -1,0 +1,189 @@
+ body {
+    /* background: #000; */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* unsplash img */
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+}
+.img-container{
+    width: 450px;
+    height: auto;
+    border: 1px solid gray;
+    position: relative;
+}
+.img-container img{
+    width: 100%;
+}
+.description{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.description .profile img{
+    height: 70px;
+    border-radius: 50%;
+}
+.description .profile{
+    margin: 0 10px;
+}
+.description .user-name h4{
+    font-size:1.3rem;
+}
+.likes-download .fa-regular, .likes-download .fa-solid{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.description .user{
+    display: flex;
+    align-items: center;
+}
+
+.likes-download{
+    display: flex;
+    align-items: center;
+}
+.likes-download .like{
+    margin: 0 20px;
+}
+.img-desc{
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+}
+button{
+    padding: .5rem 2rem;
+    font-size: 1.4rem;
+}
+
+/*
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.movie {
+    height: auto;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie img {
+    height: auto;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.title {
+    color: #000;
+    margin: 10px 0 0;
+    text-align: center;
+} */
+
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.movie:hover {
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    background-image: url(Images/ST2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    border-radius: 8px;
+}
+.movie:hover .movie-info{
+    display: block;
+
+}
+.movie {
+    width: 110px;
+    height: 150px;
+    background-image: url(Images/ST1.jpg);
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: .5s ;
+}
+
+.movie-info{
+    display: none;
+}
+
+#save {
+    position: absolute;
+    right: 17px;
+    top: 12px;
+    color: #fff;
+}
+
+.movie-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 12px;
+}
+
+.year-seasons {
+    margin: 10px 0;
+}
+
+.btns button {
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: #302f2f;
+    color: #fff;
+    font-size: 12px;
+}
+
+#down-ang {
+    color: #fff;
+}
+
+*/
+
+
+/* .gx-movie{
+    height: auto;
+    width: 40%;
+    border: 1px solid white;
+    padding: 20px;
+} */
+

@@ -25,7 +25,7 @@
 // // fetchData();
 
 
-
+/*
 async function fetchPlanet() {
     const url = 'https://planets-by-api-ninjas.p.rapidapi.com/v1/planets?name=Mars';
 
@@ -53,3 +53,13 @@ async function fetchPlanet() {
 }
 
 // fetchPlanet();
+*/
+// &type=search&api_key=${SERPAPI_KEY}
+
+let URL = `https://serpapi.com/search.json?engine=google_maps&q=Coffee`
+
+async function fetch() {
+    let response = await fetch(URL);
+    let data = await response.json()
+    console.log(data)
+}

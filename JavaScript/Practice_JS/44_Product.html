@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .product-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            flex: 0 0 22%;
+            box-sizing: border-box;
+            transition: box-shadow 0.3s ease;
+        }
+        .product-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-box img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .product-box img:hover {
+            transform: scale(1.1);
+        }
+        .product-info {
+            padding: 10px;
+            text-align: start;
+        }
+        .product-info h3 {
+            margin: 0 0 5px;
+            font-size: 12px;
+        }
+        .rating {
+            background-color: #4caf50;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 14px;
+            color: #333;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-left: 5px;
+        }
+        .discount {
+            color: red;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ukulele Collection</h1>
+<div id="product-container"></div>
+
+<script>
+    const products = [
+        {
+            name: 'IMAGINEA Acoustic Guitar Strings Set of 6',
+            description: '6 Strings',
+            rating: '4.1',
+            reviews: '(58)',
+            price: '₹225',
+            originalPrice: '₹499',
+            discount: '54% off',
+            imageUrl: 'https://rukminim2.flixcart.com/image/612/612/kij6f0w0-0/ukulele/w/p/u/kad-uku-24brn-eq-c-1-concert-sized-ukulele-24inch-built-in-original-imafyawfj9xgdhad.jpeg?q=70',
+            delivery: 'Free delivery',
+            deal: 'Hot Deal'
+        }
+    ];
+
+    const container = document.getElementById('product-container');
+
+    for (let i = 0; i < 8; i++) {
+        const productBox = document.createElement('div');
+        productBox.className = 'product-box';
+
+        productBox.innerHTML = `
+        <img src="${products[0].imageUrl}" alt="${products[0].name}">
+        <div class="product-info">
+            <h3>${products[0].name}</h3>
+            <div class="rating"> ${products[0].rating}★</div>
+            <div style="display:inline;"> ${products[0].reviews}</div>
+            <p>${products[0].description}</p>
+            <div class="price">
+                <span>${products[0].price}</span>
+                <span class="original-price">${products[0].originalPrice}</span>
+                <span class="discount">${products[0].discount}</span>
+            </div>
+            <p>${products[0].delivery}</p>
+            <p>${products[0].deal}</p>
+        </div>
+    `;
+        container.appendChild(productBox);
+    }
+</script>
+
+</body>
+</html>

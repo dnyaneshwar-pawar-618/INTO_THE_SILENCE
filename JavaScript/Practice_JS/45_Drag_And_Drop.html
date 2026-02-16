@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f4f4f4;
+      }
+      .board {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .column {
+        width: 30%;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        min-height: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      .task {
+        padding: 10px;
+        margin: 10px;
+        background: #3498db;
+        color: white;
+        border-radius: 5px;
+        cursor: grab;
+      }
+      .task:hover {
+        opacity: 0.8;
+      }
+      .delete-btn {
+        float: right;
+        background: red;
+        color: white;
+        border: none;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-content: center   ;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Kanban Board</h2>
+    <input type="text" id="taskInput" placeholder="Enter Task" />
+    <button onclick="addTask()">Add Task</button>
+
+    <div class="board">
+      <div
+        class="column"
+        id="todo"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h3>To Do</h3>
+      </div>
+      <div
+        class="column"
+        id="inprogress"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h3>In Progress</h3>
+      </div>
+      <div
+        class="column"
+        id="done"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <h3>Done</h3>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", loadTasks);
+
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        let taskId = event.dataTransfer.getData("text");
+        let task = document.getElementById(taskId);
+        event.target.appendChild(task);
+        saveTasks();
+      }
+
+      function addTask() {
+        let taskText = document.getElementById("taskInput").value;
+        if (taskText.trim() === "") return;
+
+        let task = document.createElement("div");
+        task.className = "task";
+        task.id = "task-" + new Date().getTime();
+        task.setAttribute("draggable", "true");
+        task.ondragstart = drag;
+        task.innerHTML = `${taskText} <button class="delete-btn" onclick="deleteTask('${task.id}')">X</button>`;
+
+        document.getElementById("todo").appendChild(task);
+        document.getElementById("taskInput").value = "";
+
+        saveTasks();
+      }
+
+      function deleteTask(taskId) {
+        let task = document.getElementById(taskId);
+        if (task) task.remove();
+        saveTasks();
+      }
+
+      function saveTasks() {
+        let data = {
+          todo: document.getElementById("todo").innerHTML,
+          inprogress: document.getElementById("inprogress").innerHTML,
+          done: document.getElementById("done").innerHTML,
+        };
+        localStorage.setItem("kanbanData", JSON.stringify(data));
+      }
+
+      function loadTasks() {
+        let savedData = localStorage.getItem("kanbanData");
+        if (savedData) {
+          let data = JSON.parse(savedData);
+          document.getElementById("todo").innerHTML = data.todo;
+          document.getElementById("inprogress").innerHTML = data.inprogress;
+          document.getElementById("done").innerHTML = data.done;
+
+          document.querySelectorAll(".task").forEach((task) => {
+            task.setAttribute("draggable", "true");
+            task.ondragstart = drag;
+          });
+
+          document.querySelectorAll(".delete-btn").forEach((button) => {
+            button.onclick = () => deleteTask(button.parentElement.id);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

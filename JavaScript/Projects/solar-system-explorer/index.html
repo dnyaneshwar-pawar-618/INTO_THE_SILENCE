@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Explorer | Interactive Cosmic Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Star Field Background -->
+    <div class="stars-container">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title">
+                <span class="title-main">SOLAR SYSTEM</span>
+                <span class="title-sub">EXPLORER</span>
+            </h1>
+            <p class="tagline">Journey Through Our Cosmic Neighborhood</p>
+        </div>
+    </header>
+
+    <!-- Control Panel -->
+    <div class="controls-panel">
+        <div class="control-group">
+            <label for="speedControl">
+                <span class="control-icon">⚡</span>
+                ORBIT SPEED
+            </label>
+            <input type="range" id="speedControl" min="0" max="5" step="0.1" value="1">
+            <span class="speed-value">1.0x</span>
+        </div>
+        
+        <button class="theme-toggle" id="themeToggle">
+            <span class="toggle-icon">🌙</span>
+            ULTRA DARK
+        </button>
+
+        <button class="compare-toggle" id="compareToggle">
+            <span class="toggle-icon">📊</span>
+            COMPARE MODE
+        </button>
+    </div>
+
+    <!-- Main Solar System Container -->
+    <main class="solar-system-container">
+        <div class="solar-system" id="solarSystem">
+            <!-- Sun -->
+            <div class="sun">
+                <div class="sun-core"></div>
+            </div>
+            
+            <!-- Planets will be generated dynamically -->
+        </div>
+    </main>
+
+    <!-- Planet Info Panel -->
+    <aside class="info-panel" id="infoPanel">
+        <button class="close-btn" id="closePanel">&times;</button>
+        <div class="info-content">
+            <div class="planet-image-container">
+                <div class="planet-image" id="planetImage"></div>
+            </div>
+            <h2 class="planet-name" id="planetName">Select a Planet</h2>
+            <p class="planet-description" id="planetDescription">Click on any planet to explore its details</p>
+            
+            <div class="planet-stats" id="planetStats">
+                <!-- Stats will be populated dynamically -->
+            </div>
+
+            <div class="compare-checkbox-container" id="compareCheckbox" style="display: none;">
+                <label class="compare-label">
+                    <input type="checkbox" class="compare-input">
+                    <span>Add to Compare</span>
+                </label>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Comparison Panel -->
+    <div class="comparison-panel" id="comparisonPanel">
+        <div class="comparison-header">
+            <h2>Planet Comparison</h2>
+            <button class="close-comparison" id="closeComparison">&times;</button>
+        </div>
+        <div class="comparison-content" id="comparisonContent">
+            <p class="comparison-instruction">Select 2 planets to compare</p>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2 class="loading-text">INITIALIZING COSMIC EXPLORER</h2>
+            <p class="loading-subtext">Loading planetary data...</p>
+        </div>
+    </div>
+
+    <!-- Instructions Overlay -->
+    <div class="instructions-overlay" id="instructions">
+        <div class="instructions-content">
+            <h3>🚀 HOW TO EXPLORE</h3>
+            <ul>
+                <li><strong>Click</strong> any planet to view details</li>
+                <li><strong>Adjust</strong> orbit speed with the slider</li>
+                <li><strong>Toggle</strong> themes for different views</li>
+                <li><strong>Compare</strong> planets side-by-side</li>
+            </ul>
+            <button class="start-exploring" id="startExploring">START EXPLORING</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

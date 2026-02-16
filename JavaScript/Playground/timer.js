@@ -16,9 +16,8 @@ timeButtons.forEach(btn => {
 
 function startTimer() {
     timeLeft = timeLimit
-    timeButtons.
 
-     = setInterval(() => {
+    timer = setInterval(() => {
         timeLeft--;
         timeElement.ttimerextContent = timeLeft
 
